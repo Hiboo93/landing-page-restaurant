@@ -1,5 +1,5 @@
 
-import { Link, NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { DropdownLinks, NavLinks } from '../../constants/index.js'
 import { FaCaretDown } from "react-icons/fa"
 import { FaUser } from "react-icons/fa"
