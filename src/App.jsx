@@ -6,20 +6,20 @@ import {
   createRoutesFromElements,
   RouterProvider,
 } from "react-router-dom";
-import Home from "./pages/home/Home";
-import About from "./pages/about/About";
-import Contact from "./pages/contact/Contact";
-import PageErrors from "./pages/page-error.jsx";
+import HomePage from "./pages/home/HomePage.jsx";
+import AboutPage from "./pages/about/AboutPage.jsx";
+import ContactPage from "./pages/contact/ContactPage.jsx";
+import ErrorPage from "./pages/ErrorPage.jsx";
 
 
 export default function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<Root />}>
-        <Route index element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<PageErrors />} />
+        <Route index element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="*" element={<ErrorPage />} />
       </Route>
     )
   );
@@ -36,8 +36,8 @@ const Root = () => {
     <>
       <div className="overflow-x-hidden">
         <Navbar />
-      </div>
         <Outlet />
+      </div>
     </>
   );
 };
