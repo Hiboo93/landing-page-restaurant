@@ -5,13 +5,13 @@ import Hero from "../../components/hero/Hero.jsx";
 import WhyChoose from "../../components/whyChoose/WhyChoose.jsx";
 
 
-export default function HomePage() {
+export default function HomePage({ handlePopup }) {
   return (
     <>
      <Hero/>
      <Banner/>
      <WhyChoose/>
-     <About/>
+     <About handlePopup={handlePopup}/>
      <Banner/>
      <Footer/>
     </>

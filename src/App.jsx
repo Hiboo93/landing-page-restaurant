@@ -10,13 +10,29 @@ import HomePage from "./pages/home/HomePage.jsx";
 import AboutPage from "./pages/about/AboutPage.jsx";
 import ContactPage from "./pages/contact/ContactPage.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
-
+import { useState } from "react";
+import PopupLogin from "./components/popup/PopupLogin.jsx";
 
 export default function App() {
+  const [showPopup, setShowPopup] = useState(false);
+
+  const handlePopup = () => {
+    setShowPopup(true);
+  };
+
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/" element={<Root />}>
-        <Route index element={<HomePage />} />
+      <Route
+        path="/"
+        element={
+          <Root
+            showPopup={showPopup}
+            setShowPopup={setShowPopup}
+            handlePopup={handlePopup}
+          />
+        }
+      >
+        <Route index element={<HomePage handlePopup={handlePopup} />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="*" element={<ErrorPage />} />
@@ -31,11 +47,12 @@ export default function App() {
   );
 }
 
-const Root = () => {
+const Root = ({ showPopup, setShowPopup, handlePopup }) => {
   return (
     <>
       <div className="overflow-x-hidden">
-        <Navbar />
+        <Navbar handlePopup={handlePopup} />
+        <PopupLogin showPopup={showPopup} setShowPopup={setShowPopup} />
         <Outlet />
       </div>
     </>

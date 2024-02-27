@@ -13,7 +13,7 @@ const BgStyle = {
   position: "relative",
 };
 
-const About = () => {
+const About = ({ handlePopup }) => {
   return (
     <>
       <div style={BgStyle} className="py-14">
@@ -36,7 +36,7 @@ const About = () => {
             voluptatem quod vitae voluptatum est Deleniti minima quaerat quos
             soluta odio neque quod tempore saepe iusto!
             <div className="pt-10 flex justify-center">
-              <button className="flex justify-center items-center gap-2 bg-primary text-xl h-[40px] text-white px-5 py-2 hover:scale-105 transition duration-300 border-0">
+              <button onClick={() => handlePopup()} className="flex justify-center items-center gap-2 bg-primary text-xl h-[40px] text-white px-5 py-2 hover:scale-105 transition duration-300 border-0 cursor-pointer hover:text-blue-600">
                 <FaUser />
                 My Account
               </button>

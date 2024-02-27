@@ -4,7 +4,7 @@ import { DropdownLinks, NavLinks } from '../../constants/index.js'
 import { FaCaretDown } from "react-icons/fa"
 import { FaUser } from "react-icons/fa"
 
-const Navbar = () => {
+const Navbar = ({handlePopup}) => {
   return (
     <>
       <div className='bg-white shadow-md'>
@@ -48,10 +48,10 @@ const Navbar = () => {
 
               {/* Login button section */}
               <li>
-                <button className='flex justify-center items-center gap-2 bg-secondary text-xl h-[40px] text-white px-5 py-2 hover:scale-105 transition duration-300 border-0'>
+                <button className='flex justify-center items-center gap-2 bg-secondary text-[2px] sm:text-base h-[40px] text-white px-5 py-2 hover:scale-105 transition duration-300 border-0'>
                   <FaUser />
                   {/* Sign in / Sign up */}
-                  <Link className='text-white hover:text-blue-500' to={"/#"}>Sign in</Link>/
+                  <Link onClick={() => handlePopup()} className='text-white hover:text-blue-500' to={"/#"}>Login</Link>/
                   <Link className='text-white hover:text-blue-500' to={"/#"}>Sign up</Link>
                 </button>
               </li>
