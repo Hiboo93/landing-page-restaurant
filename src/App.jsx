@@ -33,7 +33,7 @@ export default function App() {
 const Root = () => {
   return (
     <>
-      <div className="overflow-x-hidde">
+      <div className="overflow-x-hidden">
         <Navbar />
       </div>
         <Outlet />
