@@ -11,6 +11,7 @@ import About from "./pages/about/About";
 import Contact from "./pages/contact/Contact";
 import PageErrors from "./pages/page-error.jsx";
 
+
 export default function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
