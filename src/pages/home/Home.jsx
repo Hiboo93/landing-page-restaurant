@@ -1,5 +1,6 @@
 import Banner from "../../components/banner/Banner.jsx";
 import Hero from "../../components/hero/Hero.jsx";
+import WhyChoose from "../../components/whyChoose/WhyChoose.jsx";
 
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       PAGE HOME
      <Hero/>
      <Banner/>
+     <WhyChoose/>
     </>
   )
 }

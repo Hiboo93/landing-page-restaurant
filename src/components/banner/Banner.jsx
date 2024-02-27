@@ -10,7 +10,7 @@ const Banner = () => {
     <>
       <div className="container py-14 relative">
         <div>
-          <h1 className="py-8 tracking-wider text-2xl font-semibold text-dark text-center ">
+          <h1 className="py-8 tracking-wider text-2xl font-semibold text-dark text-center">
             Tast the healthy difference Difference
           </h1>
           {/* content section */}
