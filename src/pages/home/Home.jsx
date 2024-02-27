@@ -1,10 +1,11 @@
+import Hero from "../../components/hero/Hero.jsx";
 
 
 export default function Home() {
   return (
-    <div>
-      HOME
-     
-    </div>
+    <>
+      PAGE HOME
+     <Hero/>
+    </>
   )
 }

@@ -17,13 +17,13 @@ const Navbar = () => {
               {
                 NavLinks.map((link) => (
                   <li key={link.id}>
-                    <Link className='inline-block hover:text-primary text-xl font-semibold font-roboto' to={link.link}>{link.name}</Link>
+                    <Link className='inline-block hover:text-primary text-xl  font-roboto' to={link.link}>{link.name}</Link>
                   </li>
                 ))
               }
               {/* simple dropdown and links */}
               <li className='cursor-pointer group '>
-              <Link className='inline-block hover:text-primary text-xl font-semibold font-roboto' to="/#">
+              <Link className='inline-block hover:text-primary text-xl  font-roboto' to="/#">
                 <div className='flex items-center gap-[2px] py-2'>
                   Dropdown
                   <span>
