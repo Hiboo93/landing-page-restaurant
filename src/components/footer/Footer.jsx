@@ -7,7 +7,10 @@ const Footer = () => {
   return (
     <>
       <div className="text-white mt-20">
-        <div className="container bg-primary rounded-t-3xl">
+        <div
+          data-aos="fade-down"
+          className="container bg-primary rounded-t-3xl"
+        >
           {/* header section */}
           <h1 className="text-white py-10 text-3xl font-bold text-center ">
             Contact Us
@@ -40,7 +43,7 @@ const Footer = () => {
             {/* Number section */}
             <div className="text-center space-y-4">
               <div className="flex justify-center">
-              <FaPhoneAlt className="text-5xl" />
+                <FaPhoneAlt className="text-5xl" />
               </div>
               <div>
                 <p className="text-white">+33 240345066 - Sales and Service</p>
@@ -52,10 +55,16 @@ const Footer = () => {
 
           {/* copyright section */}
           <div className="flex justify-between p-4 items-center">
-            <p className="text-white">Copyright 2022 TCJ. All rights reserved</p>
-            <div className="flex items-center gap-6" >
-              <Link className="text-white" to={"#"}>Privacy Policy</Link>
-              <Link className="text-white" to={"#"}>Terms & Condition</Link>
+            <p className="text-white">
+              Copyright 2022 TCJ. All rights reserved
+            </p>
+            <div className="flex items-center gap-6">
+              <Link className="text-white" to={"#"}>
+                Privacy Policy
+              </Link>
+              <Link className="text-white" to={"#"}>
+                Terms & Condition
+              </Link>
             </div>
           </div>
         </div>
