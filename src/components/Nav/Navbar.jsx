@@ -40,7 +40,7 @@ const Navbar = ({ handlePopup }) => {
               {NavLinks.map((link) => (
                 <li key={link.id}>
                   <Link
-                    className="inline-block hover:text-primary text-xl  font-roboto"
+                    className="hidden md:block hover:text-primary text-xl  font-roboto"
                     to={link.link}
                   >
                     {link.name}
@@ -48,7 +48,7 @@ const Navbar = ({ handlePopup }) => {
                 </li>
               ))}
               {/* simple dropdown and links */}
-              <li className="cursor-pointer group ">
+              <li className="hidden sm:block cursor-pointer group ">
                 <Link
                   className="inline-block hover:text-primary text-xl  font-roboto"
                   to="/#"
@@ -80,7 +80,7 @@ const Navbar = ({ handlePopup }) => {
 
               {/* Login button section */}
               <li>
-                <button className="flex justify-center items-center gap-2 bg-secondary text-[2px] sm:text-base h-[40px] text-white px-5 py-2 hover:scale-105 transition duration-300 border-0">
+                <button className="flex justify-center items-center gap-2 bg-secondary text-xl h-[40px] text-white md:px-5 py-2 px-2 hover:scale-105 duration-300 border-0">
                   <FaUser />
                   {/* Sign in / Sign up */}
                   <Link
